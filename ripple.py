@@ -7,5 +7,5 @@ class Ripple:
         self.color = color
 
     def draw(self, window):
-        pygame.draw.circle(window, self.color, self.mouse_position, self.radius, width=1)
+        pygame.draw.circle(window, self.color, self.mouse_position, self.radius, width=2)
         pygame.display.update()
