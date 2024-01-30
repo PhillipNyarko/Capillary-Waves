@@ -1,0 +1,4 @@
+create a ripple (a circle)
+add it to a list of ripples
+create another ripple
+decrease the color values of the ripples in the list as the new ones are created until the color reaches the bg color
