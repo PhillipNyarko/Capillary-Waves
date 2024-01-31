@@ -11,9 +11,9 @@ window = pygame.display.set_mode(window_size)
 
 pygame.display.set_caption("Water Ripples")
 
-RIPPLE_COLOR = (0, 51, 153)
-RIPPLE_SHADOW_COLOR = (0, 25, 77, 0.8)
-BACKGROUND_COLOR = (0, 0, 102) 
+RIPPLE_COLOR = (24, 58, 92)
+RIPPLE_SHADOW_COLOR = (12, 31, 56, 0.5)
+BACKGROUND_COLOR = (12, 31, 56) 
 
 # game loop
 
