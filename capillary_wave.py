@@ -1,4 +1,5 @@
 import time
+import math
 from ripple import Ripple
 
 # colors
@@ -21,19 +22,23 @@ class CapillaryWave:
         for i in range(1, number_of_frames + 1):
 
             self.ripples_list[-1].radius += i ** 2 # increase the radius of the last ripple in the ripple list
-                #DOESN'T WORK THEY'LL ALL END UP BEING "2" FIX LATER 
 
-            # set the positions of each ripple for the current frame
-            for j in range(len(self.ripples_list)):
-                self.ripples_list[j].radius = self.ripples_list[j - 1].radius 
+            # set the positions of each ripple to be the square root of the next ripple in the ripple list
+            for j in range(len(self.ripples_list) - 2, -1, -1):
+                self.ripples_list[j].radius = (self.ripples_list[j + 1].radius) / 2
+                print(self.ripples_list[j].radius)
+            print("_____")
 
             # draw all the ripples
             for j in range(len(self.ripples_list)):
                 self.ripples_list[j].draw(self.window)
 
             # pause temporarily and clear the window  
-            time.sleep(0.01)
-            self.window.fill(BACKGROUND_COLOR)
+
+            if i % 2 == 0:
+                self.window.fill(BACKGROUND_COLOR)
+                time.sleep(1)
+
                 
 
 
