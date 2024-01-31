@@ -11,7 +11,9 @@ window = pygame.display.set_mode(window_size)
 
 pygame.display.set_caption("Water Ripples")
 
-BACKGROUND_COLOR = (25, 25, 25) 
+RIPPLE_COLOR = (0, 51, 153)
+RIPPLE_SHADOW_COLOR = (0, 25, 77, 0.8)
+BACKGROUND_COLOR = (0, 0, 102) 
 
 # game loop
 
@@ -24,7 +26,7 @@ while running:
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             if pygame.mouse.get_pressed()[0]: # if left mouse button pressed
-                capillary_wave = CapillaryWave(pygame.mouse.get_pos(), window)
+                capillary_wave = CapillaryWave(pygame.mouse.get_pos(), window, RIPPLE_COLOR, RIPPLE_SHADOW_COLOR, BACKGROUND_COLOR)
 
     window.fill(BACKGROUND_COLOR) # fill background
     pygame.display.update() # update display
