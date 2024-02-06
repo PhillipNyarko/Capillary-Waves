@@ -1,5 +1,4 @@
 import sys
-import time
 import pygame
 from capillary_wave import CapillaryWave 
 
